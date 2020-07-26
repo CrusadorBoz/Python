@@ -7,6 +7,13 @@ class BowlingGame:
         rollTracker = self.rolls
         print(rollTracker)
 
+    def rollMany(self, pins, rolls):
+        for i in range(rolls):
+            # self.game.roll(pins)
+            self.rolls.append(pins)
+            rollTracker = self.rolls
+            print(rollTracker)
+
     def score(self):
         result = 0
         rollIndex = 0
