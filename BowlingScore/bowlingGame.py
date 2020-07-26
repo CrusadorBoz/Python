@@ -34,9 +34,6 @@ class BowlingGame:
         return 10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
 
     def spareScore(self, rollIndex):
-        if rollIndex == 18:
-            return 10 + self.rolls[rollIndex + 2]
-        else:
             return 10 + self.rolls[rollIndex + 2]
 
     def frameScore(self, rollIndex):
