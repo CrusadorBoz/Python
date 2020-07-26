@@ -4,15 +4,10 @@ class BowlingGame:
 
     def roll(self, pins):
         self.rolls.append(pins)
-        rollTracker = self.rolls
-        print(rollTracker)
 
     def rollMany(self, pins, rolls):
         for i in range(rolls):
-            # self.game.roll(pins)
-            self.rolls.append(pins)
-            rollTracker = self.rolls
-            print(rollTracker)
+            self.roll(pins)
 
     def score(self):
         result = 0
@@ -39,7 +34,10 @@ class BowlingGame:
         return 10 + self.rolls[rollIndex + 1] + self.rolls[rollIndex + 2]
 
     def spareScore(self, rollIndex):
-        return 10 + self.rolls[rollIndex + 2]
+        if rollIndex == 18:
+            return 10 + self.rolls[rollIndex + 2]
+        else:
+            return 10 + self.rolls[rollIndex + 2]
 
     def frameScore(self, rollIndex):
         return self.rolls[rollIndex] + self.rolls[rollIndex + 1]
